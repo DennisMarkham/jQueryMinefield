@@ -1,0 +1,10 @@
+#tileDiv
+{
+	text-align: center;
+}
+
+/*this gives some space inside the button */
+.tileText
+{
+	visibility: hidden;
+}
