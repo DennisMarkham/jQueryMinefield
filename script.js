@@ -32,6 +32,44 @@ console.log(treasureTile)
 $("#" + treasureTile).on("click", function(){
 alert("treasure found!")
 })
+//creates an array of used tiles, so there's no repitition
+var used = [treasureTile];
+
+//this stuff doesn't work
+function createMine(used)
+{
+	var newMine = String(Math.floor(Math.random() * 5)) + String(Math.floor(Math.random() * 5));
+
+	//this checks to see if the coordinates are already in the used Array
+	for (let i = 0; row < used.length; i++) {
+		if(used[i] == newMine)
+		{
+		createMine(used)		
+		}
+
+		$("#" + newMine).on("click", function(){
+			alert("boom")
+		})
+
+		return newMine
+}
+
+}
+
+used.push(createMine(used));
+
+used.push(createMine(used));
+
+used.push(createMine(used));
+
+used.push(createMine(used));
+
+used.push(createMine(used));
+
+used.push(createMine(used));
+
+
+
 
 
 //})
